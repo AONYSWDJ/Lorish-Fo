@@ -1,37 +1,35 @@
-# InternshipInAnZhiInvestment
+# DashingAutomaticRefreshingDiagram
 
 #### 介绍
-关于第二份quant实习中的项目
+这是一份关于实时更新资产净值的曲线图，通过多线程的方式实现了数据的获取、保存、缓存，同时支持对实时更新数据的读取和展示。
 
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 软件架构和功能
+本项目采用了以下的架构设计
+    1 多线程： 通过多线程实现了数据的并行获取和处理，在API登录和数据读取上同步进行，提高了效率的同时，注重数据的交互特点，采用lock进行文件保存读取锁定
+    2 数据缓存： 在脚本中设置了cache文件夹进行当天数据的保存，通过os系系统进行判断和删除
+    3 前端展示： 通过dash库和plotly库完成了对历史资产净值、当日实时资产净值、历史资产净值涨跌幅的可视化曲线以及rangesldier交互
+    4 数据更新与保存： 支持动态连接多个api登录系统，获取数据。目前支持Akshare、Tushare、XTtrader 登录端口
+    5 框架型接口留用： 采用堆叠式函数编写逻辑， 为后期脚本维护提供了多个接口，方便更改绘图需求以及登录需求
+    6 休盘时间判断： 在非开盘时间内自动停止更新，
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+    1 克隆仓库
+    2 填写登录接口
+    3 注意，登录库的时候需要修改主线程中login函数
+    3 创建cache库
+    4 initial 最初history_csv数据，并修改column_names，使之存在 '日期'、'净值'即可
+    5 该项目适合在服务器上运行，XTtrader登录端口不允许虚拟机登录，其他数据获取端口运行虚拟机
 
-#### 参与贡献
+#### 代码逻辑拆解
+    FAQ
+        采用了双子线程运行的框架逻辑（为什么主线程+子线程？因为我喜欢对称之美）
+        采用了全局字典进行线程间的数据传参和更新（为什么不用 queue进行队列传参？ 因为queue在消费之后会可能成为空值）
+        采用了函数继承编写（为什么不用类进行定义？因为只是脚本而非项目，不需要进行太多的维护，而且self写的不累么？当然，用类写会更加的健壮）
+    
+    逻辑
+        主线程首先初始化登录后进行第一次绘图，确保在最开始的未进行更新的时候存在曲线
+            ——子线程1：while True：获取数据——修改数据、数据清洗——传出数据并保存本地
+            ——子线程2：访问数据——数据整理、数据时间判断——绘图并callback循环
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
 
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)

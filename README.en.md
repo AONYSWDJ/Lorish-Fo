@@ -1,7 +1,7 @@
 # InternshipInAnZhiInvestment
 
 #### Description
-关于第二份quant实习中的项目
+
 
 #### Software Architecture
 Software architecture description
