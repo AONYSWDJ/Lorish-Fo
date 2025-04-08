@@ -747,7 +747,7 @@ class CallBack(XtTraderApiCallback):
 if __name__ == '__main__':
     server_addr = "175.25.41.247:65300" # 统一交易服务器的地址
     username = "安值_独立交易员"
-    password = "az913702"
+    password = "（输入自己代码）"
     cb = CallBack(server_addr, username, password)
     cb.init()
 

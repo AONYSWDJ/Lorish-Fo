@@ -506,7 +506,7 @@ def dash_1(cb):
 if __name__ == "__main__":
     server_addr = "175.25.41.106:65300 "  # 统一交易服务器的地址
     username = "安值_独立交易员"  # 测试用户，同客户端登录用户，非资金账号
-    password = "az913702"  # 用户密码，客户端登录密码，非资金密码
+    password = "(输入自己代码)"  # 用户密码，客户端登录密码，非资金密码
     cb = demoforRequest.CallBack(server_addr, username, password)
     cb.init()
     cb.join()
