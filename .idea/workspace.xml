@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="48eac95d-cf83-4ab3-9d2c-b66565cdc729" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/ProjectDemo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/ProjectTrail.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/cache_loader/安值test2_daily.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/cache_loader/安值test2_history.csv" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/cache_loader/安值test2_history.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/cache_loader/安值test_daily.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/cache_loader/安值test_history.csv" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/cache_loader/安值test_history.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/dashsilderF.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/template_one.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/下单类demo-py3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/安值test1_history.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/安值test2_history.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/简易版查询类demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/订阅行情demo.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2vQvrSuJD8kKrHSikIRm63Emmb0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/360MoveData/Users/Administrator/Desktop/intern file/项目集&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\360MoveData\Users\Administrator\Desktop\intern file\项目集\以Dash为基础的资产实时净值可视化" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-4f4e415b4190-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.26053.29" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="48eac95d-cf83-4ab3-9d2c-b66565cdc729" name="Changes" comment="" />
+      <created>1744090311727</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744090311727</updated>
+    </task>
+    <task id="LOCAL-00001" summary="20250408 传输代码">
+      <option name="closed" value="true" />
+      <created>1744090898849</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744090898849</updated>
+    </task>
+    <task id="LOCAL-00002" summary="传输半成品结果">
+      <option name="closed" value="true" />
+      <created>1744092782370</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744092782370</updated>
+    </task>
+    <task id="LOCAL-00003" summary="传输半成品结果">
+      <option name="closed" value="true" />
+      <created>1744093951161</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744093951161</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="20250408 传输代码" />
+    <MESSAGE value="传输半成品结果" />
+    <option name="LAST_COMMIT_MESSAGE" value="传输半成品结果" />
+  </component>
+</project>
