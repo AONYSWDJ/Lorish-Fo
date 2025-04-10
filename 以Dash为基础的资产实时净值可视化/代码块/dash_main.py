@@ -1,25 +1,16 @@
 import threading
+import time
+
 import dash
 import dash_html_components as html
 from dash import dcc, html, callback, Output, Input, State, no_update
-from data_require import login_main,get_Data
+from data_require import login_main,get_Data,is_tradeing_time
 from data_wash import data_main, swtich_download_data
 from dash_tab import get_tab
 from dash_graph import dash_slider_1,dash_graph_3,dash_slider_2
 from datetime import datetime
 
 
-def is_tradeing_time():
-    # A股交易时间：9:30-11:30, 13:00-15:00
-    market_open_morning_start = datetime.strptime("08:50", "%H:%M").time()
-    market_open_morning_end = datetime.strptime("11:30", "%H:%M").time()
-    market_open_afternoon_start = datetime.strptime("13:00", "%H:%M").time()
-    market_open_afternoon_end = datetime.strptime("18:00", "%H:%M").time()
-    current_time = datetime.now().time()
-    if (market_open_morning_start <= current_time <= market_open_morning_end) or \
-            (market_open_afternoon_start <= current_time <= market_open_afternoon_end):
-        return True
-    return False
 
 
 
@@ -32,7 +23,7 @@ def dashboard(data_dict):
         html.Div([
             html.Br(),
             html.Img(
-                src='cache_loader//420a987dc8c929c7263e625c56a087054610.jpeg',
+                src='https://i.loli.net/2020/11/16/Wg9bPV6xpCcQ8qy.png',
                 style={
                     'height': '15%',
                     'width': '15%',
@@ -62,10 +53,10 @@ def dashboard(data_dict):
             html.Hr(),
             html.P(
                 '''
-                声明: 本网页内容仅限作品展示，其中数据皆随机生成，未经授权禁止转载或对外转发，否则后果自负，
+                声明: 本网页内容仅限公司内部员工使用，不构成任何投资建议，未经授权禁止转载或对外转发，否则按公司相关制度处罚，
                 情节严重的将追究相应法律责任。
                 '''),
-            html.P("© Lorish Fo作品集")
+            html.P("© 青岛安值投资管理有限公司")
         ]),
     ])
 
@@ -80,18 +71,15 @@ def dashboard(data_dict):
     @app.callback(Output('historical_dynamic','figure'),
                   [Input('slider-dynamic-info','value')])
     def update_slider(va):
-        if is_tradeing_time():
-            return dash_slider_1(data_dict,va)
-        else:
-            return no_update
+        return dash_slider_1(data_dict,va)
+
 
     @app.callback(Output('historical_revenue','figure'),
                   [Input('slider-revenue-info','value')])
     def update_slider(va):
-        if is_tradeing_time():
-            return dash_slider_2(data_dict,va)
-        else:
-            return no_update
+
+        return dash_slider_2(data_dict,va)
+
 
 
     @app.callback(Output('daily_revenue','figure'),
@@ -100,6 +88,7 @@ def dashboard(data_dict):
         if is_tradeing_time():
             return dash_graph_3(data_dict)
         else:
+            print('数据不更新')
             return no_update
     return app
 def dashMain(app):
@@ -113,11 +102,10 @@ if __name__ == '__main__':
     cb = login_main()
     data = get_Data(cb)
     swtich_download_data(data_dict,data)
+    print('完成初始化更新')
 
     # 进入线程一、不断地更新数据到表格里面
     download_thread = threading.Thread(target=data_main,args=(cb,data_dict),daemon=True)
     download_thread.start()
-
-
     # 提取出数据进行画图就好了
     dashMain(dashboard(data_dict))

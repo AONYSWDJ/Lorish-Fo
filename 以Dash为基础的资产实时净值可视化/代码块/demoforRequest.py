@@ -1,3 +1,4 @@
+import sys
 from symbol import continue_stmt
 
 from XtTraderPyApi import *
@@ -92,6 +93,8 @@ class CallBack(XtTraderApiCallback):
                 # print("m_nProductId: ", data.m_nProductId, "m_strProductName", data.m_strProductName, "m_strProductCode", data.m_strProductCode, "m_dTotalNetValue", data.m_dTotalNetValue )
         else:
             print("reqProductDataSync errmsg:", error.errorMsg())
+            print('请重新尝试登录，并检查cache_loader')
+            sys.exit()
         return productList
 
     #查询产品信息
@@ -747,7 +750,7 @@ class CallBack(XtTraderApiCallback):
 if __name__ == '__main__':
     server_addr = "175.25.41.247:65300" # 统一交易服务器的地址
     username = "安值_独立交易员"
-    password = "（输入自己代码）"
+    password = "az913702"
     cb = CallBack(server_addr, username, password)
     cb.init()
 

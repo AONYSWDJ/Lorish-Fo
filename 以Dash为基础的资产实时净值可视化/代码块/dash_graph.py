@@ -1,6 +1,9 @@
 import datetime
+from itertools import product
+
 import plotly.graph_objects as go
 
+from Dashapi import scatter_graph
 from dash_format import format_figure
 
 def amends_data():
@@ -57,8 +60,8 @@ def dash_slider_1(data_dict, va):
     id_name1 = 'historical_dynamic'
 
     df = data_dict[id_name1]
-    traces = scatter_graph(df,'历史净值',yr_start,yr_end)[0]
 
+    traces = scatter_graph(df,'历史净值',yr_start,yr_end)[0]
     fig = go.Figure(data=traces)
     fig = format_figure(fig, y=False)
     return fig

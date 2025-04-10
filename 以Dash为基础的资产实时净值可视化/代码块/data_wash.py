@@ -4,8 +4,11 @@ import pandas as pd
 import os
 from datetime import datetime
 
-from data_require import get_Data
+from data_require import get_Data,is_tradeing_time
 
+
+def login_judgement():
+    pass
 
 def amends_data(df,time):
     dff = df[df['净值'] != '-']
@@ -54,6 +57,10 @@ def swtich_download_data(data_dict,data): # 进行格式上的转换，包括日
 
     historical_dataframe = pd.DataFrame()
     historical_revenue_dataframe = pd.DataFrame()
+
+
+
+
 
     # 拿到了daily dataframe
     if os.path.exists(fr'cache_loader\today_netvalue.csv'):
@@ -132,7 +139,12 @@ def swtich_download_data(data_dict,data): # 进行格式上的转换，包括日
 
 def data_main(cb,data_dict): # 包装一个全局变量，用于记录已经载入了多少次
     while True:
-        data = get_Data(cb)
-        swtich_download_data(data_dict,data)
-        print('字典更新完毕')
         time.sleep(60)
+        data = get_Data(cb)
+        if is_tradeing_time():
+            swtich_download_data(data_dict,data)
+            print('字典更新完毕')
+        else:
+            print('休盘时间，字典不更新')
+
+

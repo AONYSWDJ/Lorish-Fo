@@ -48,7 +48,7 @@ def get_tab(data_dict):
             html.Div('产品实时资产涨跌幅', className="title2",style={"font-size": "40px", "font-weight": "bold"}),
             html.Hr(),
             dcc.Graph(id='daily_revenue', className="graph-m"),
-            dcc.Interval(id='interval',interval=6000,n_intervals=0)])
+            dcc.Interval(id='interval',interval=60000,n_intervals=0)])
 
         ])
     return tab
