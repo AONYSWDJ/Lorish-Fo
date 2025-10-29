@@ -178,3 +178,179 @@ KNN 模型能在高维稀疏特征下完成初步伪标签生成，但对数据�
 
 ----
 *报告完*
+# 📊 A-Share Market Sentiment Analysis and Market Validation Report  
+**Project Title:** Text Sentiment Prediction Combining AI Agent and XGBoost  
+**Author:** FU Shoahua  
+**Date:** October 2025  
+**Note:** This report is AI-generated and serves as a structured overview to help readers quickly grasp the core content of the project.  
+
+---
+
+## I. Research Background and Objectives  
+
+In financial markets, news sentiment often exerts a significant influence on investor expectations and market volatility. However, due to the scarcity of high-quality labelled Chinese financial news data, traditional supervised learning approaches are difficult to apply directly.
+
+This study aims to complete a **semi-supervised sentiment recognition task** by **integrating a Large Language Model (AI Agent) with a pretrained XGBoost model**, under limited human annotation. It further quantifies the potential impact of news sentiment on the A-share market.  
+
+**Objectives:**  
+1. Develop an **automated sentiment recognition pipeline** with interpretability and scalability;  
+2. Enhance pseudo-label quality using an AI Agent to transform an unsupervised task into a semi-supervised framework;  
+3. Validate the correlation between sentiment signals and market movements using historical trading data.  
+
+---
+
+## II. Methodology and Technical Framework  
+
+### 1. Overall Workflow  
+
+1. **Text Cleaning and Feature Extraction**  
+   - Cleaned raw JSON data, removed full-width symbols (e.g. `\u3000`), and extracted the *source* field using `jieba`;  
+   - Constructed two new features: `source` (news origin) and `insert_time` (timestamp) for feature enhancement.  
+
+2. **Initial XGBoost Sentiment Prediction**  
+   - Applied a pretrained WeiboSentiment XGBoost model for sentiment inference;  
+   - Extracted high-confidence samples (prediction probability > 0.9 or < 0.1) as pseudo-labelled data.  
+
+3. **AI Agent Label Verification**  
+   - Utilised a LangChain-based Agent to verify high-confidence samples;  
+   - Retained samples with consistent decisions between the Agent and XGBoost as the validation set;  
+   - Formed a semi-supervised learning pipeline.  
+
+4. **Feature Enhancement and Semi-Supervised Iteration**  
+   - Added new features:  
+     - `Day`: normalised day extracted from timestamps;  
+     - `freq`: frequency encoding of news sources;  
+   - Compared Logistic Regression and KNN-based semi-supervised iterative models for pseudo-label propagation;  
+   - Evaluated models using **Accuracy** and **F1-score** metrics.  
+
+---
+
+## III. Experimental Process and Results  
+
+### 1. Initial XGBoost Results  
+
+| Metric | Value |
+|---------|--------|
+| Total Samples | 52,303 |
+| High-Confidence Samples | 1,187 |
+| Label Distribution | Positive ~51%, Negative ~49% |
+
+---
+
+### 2. KNN Semi-Supervised Results  
+
+| Model | Accuracy | F1-score |
+|--------|-----------|----------|
+| KNN Semi-Supervised | 0.617 | 0.615 |
+
+The KNN model generated preliminary pseudo-labels under high-dimensional sparse features but showed sensitivity to data distribution.  
+
+---
+
+### 3. Logistic Iterative Results  
+
+| Iteration | Sample Size | Accuracy | F1-score |
+|------------|--------------|-----------|-----------|
+| Round 1 | 2,588 | 0.7136 | 0.7094 |
+| Rounds 2–4 | 2,611 | 0.7136 | 0.7094 |
+| Early Stop | — | Model Converged | — |
+
+The final **F1-score reached 0.7094**, indicating effective feature enhancement and pseudo-labelling mechanisms.  
+
+---
+
+## IV. Market Validation (15–19 March 2025)  
+
+### 1. Average Sentiment Trend  
+
+| Date | Average Sentiment |
+|------|--------------------|
+| 15 Mar | 0.1718 |
+| 16 Mar | 0.2845 |
+| 17 Mar | 0.3519 |
+| 18 Mar | 0.3469 |
+| 19 Mar | 0.3523 |
+
+> Sentiment rose slightly overall, though volatility remained limited.  
+
+---
+
+### 2. Actual Market Performance (Shanghai Composite Index)  
+
+| Date | Closing Movement | Change | Turnover Variation |
+|------|-------------------|--------|--------------------|
+| 17 Mar | -17.0 | Decline | -2503 |
+| 18 Mar | -1.6 | Slight Drop | -1484 |
+| 19 Mar | +11.8 | Mild Rise | -910 |
+
+Comparing sentiment with market data, no significant short-term resonance between rising sentiment and market performance was observed.  
+**Conclusion:** Short-term sentiment changes did not produce a statistically significant market response.  
+
+---
+
+## V. Innovation and Advantages  
+
+1. **Hybrid Framework of AI Agent and Traditional ML**  
+   - AI Agent-assisted pseudo-labelling significantly improves the use of unlabelled data;  
+   - Reduces manual annotation costs while maintaining scalability.  
+
+2. **Multi-Feature Fusion Mechanism**  
+   - Introduced temporal and source-frequency features;  
+   - Logistic model ensures interpretability and computational efficiency.  
+
+3. **Multi-Stage Validation System**  
+   - Pipeline: XGBoost → Agent → Semi-supervised Logistic → Market Validation;  
+   - Ensures consistency between statistical and financial logic.  
+
+---
+
+## VI. Future Improvements and Extensions  
+
+1. **Lightweight Agent Alternatives**  
+   - Integrate local models (e.g. **Ollama** or **FinanceMCP**) to reduce token costs and improve response speed.  
+
+2. **Enhanced Feature Engineering**  
+   - Introduce time-decay weighting;  
+   - Construct CAPM-style sentiment-weighted factors.  
+
+3. **Quantitative Extension**  
+   - Combine sentiment signals with Open Interest;  
+   - Develop multi-factor trading signals or risk-monitoring indicators.  
+
+---
+
+## VII. Conclusion  
+
+This study establishes a complete pipeline for interpretable sentiment prediction based on the **XGBoost + AI Agent + Semi-supervised Logistic** framework.  
+
+**Key Findings:**  
+- Achieved F1 ≈ **0.71** under semi-supervised conditions;  
+- Limited short-term correlation between news sentiment and market returns;  
+- Framework demonstrates strong scalability for sentiment-driven financial analysis.  
+
+The methodology provides a **cost-efficient and reproducible** path for **quantitative sentiment analysis and event-driven market research**.  
+
+---
+
+## VIII. Code Framework  
+
+The project is modular and object-oriented, ensuring robustness and flexibility for integration into other research pipelines.  
+
+- **agent/**
+  - CSV reading and saving utilities  
+  - Agent core logic  
+- **data/**
+  - All modified datasets for Task 1 and Task 2  
+- **semi_supervised_models/**
+  - Object-oriented KNN implementation  
+  - Encapsulated Logistic model  
+- **exam/**
+  - Original problem statements and raw data  
+- **pretrained_models/**
+  - `githubrequest` library using only XGBoost and stopwords modules  
+- **notebooks/**
+  - Core code and step-by-step Markdown documentation  
+
+---
+
+*End of Report*
