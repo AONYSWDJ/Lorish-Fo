@@ -75,6 +75,7 @@ def dash_slider_2(data_dict,va):
     df = data_dict[id_name1]
     traces = scatter_graph(df,'历史涨跌幅',yr_start,yr_end)[1]
 
+
     fig = go.Figure(data=traces)
     fig = format_figure(fig, y=False)
     return fig

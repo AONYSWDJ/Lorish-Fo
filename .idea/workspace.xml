@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48eac95d-cf83-4ab3-9d2c-b66565cdc729" name="Changes" comment="项目2开始" />
+    <list default="true" id="48eac95d-cf83-4ab3-9d2c-b66565cdc729" name="Changes" comment="项目2开始">
+      <change afterPath="$PROJECT_DIR$/A股市场与新闻情绪相关性分析——基于Xgboost、Logistic、AI_Agent/resultInMid.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/项目集.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/项目集.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.en.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.en.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/config/server.crt" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/config/server.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/config/traderApi.ini" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/config/traderApi.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/config/traderApi.log4cxx" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/config/traderApi.log4cxx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/XtTraderPyApi.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/XtTraderPyApi.pyi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/cache_loader/today_netvalue.csv" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/cache_loader/today_netvalue.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/cache_loader/安值test2_history.csv" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/cache_loader/安值test2_history.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/cache_loader/安值test_history.csv" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/cache_loader/安值test_history.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/dash_format.py" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/dash_format.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/dash_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/dash_graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/dash_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/dash_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/dash_tab.py" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/dash_tab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/data_require.py" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/data_require.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/data_wash.py" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/data_wash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/demoforRequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/demoforRequest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/qodana.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/qodana.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/temp-plot.html" beforeDir="false" afterPath="$PROJECT_DIR$/以Dash为基础的资产实时净值可视化/代码块/temp-plot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/订单流CTA期货趋势量化策略/CTA_bookingflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/订单流CTA期货趋势量化策略/CTA_bookingflow.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +45,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AONYSWDJ&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AONYSWDJ/Lorish-Fo.git&quot;,
+    &quot;accountId&quot;: &quot;725fe717-400a-4832-85b2-53b83425f381&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
@@ -29,14 +66,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/360MoveData/Users/Administrator/Desktop/intern file/项目集&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/loridh/PycharmProjects/Lorish-Fo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\360MoveData\Users\Administrator\Desktop\intern file\项目集\以Dash为基础的资产实时净值可视化" />
@@ -45,7 +89,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-4f4e415b4190-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.26053.29" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
+        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
       </set>
     </attachedChunks>
   </component>
@@ -57,6 +102,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1744090311727</updated>
+      <workItem from="1761692283866" duration="377000" />
+      <workItem from="1761740700574" duration="2132000" />
     </task>
     <task id="LOCAL-00001" summary="20250408 传输代码">
       <option name="closed" value="true" />
@@ -116,6 +163,9 @@
     </task>
     <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="20250408 传输代码" />
